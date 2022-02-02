@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Lobster&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap');
+
+/*FONTES PREDEFINIDAS*/
+:root{
+--fonte-title--:"Dongle";
+--fonte-subtitle--:"Mochiy Pop P One";
+--fonte-buttom--:"Lobster";
+}
+/*ZERANDO VALORES PADROES*/
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+/*SUAVIDADE NA ROLAGEM DO SCROLL*/
+html{
+  scroll-behavior: smooth;
+}
+/*ALTERANDO SCROLL DA PAGINA*/
+body::-webkit-scrollbar{
+  width: 1.3rem;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(172, 124, 98);
+  border-radius: .4rem;
+}
+body::-webkit-scrollbar-track{
+  background-color: black;
+}
+/*TITULO PADRAO DE TODAS AS SESSOES*/
+.title-section{
+  color: #fff;
+  font-family: var(--fonte-title--);
+  font-size: 70px;
+  text-align: center;
+  color: rgb(153, 119, 74);
+}
+
+/*ELEMENTO PAI DO MENU*/
+.menu-speed{
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  background-color: rgb(0, 0, 0);
+  color: #ffff;
+  z-index: 1;
+}
+
+.img-logo{
+  cursor: pointer;
+}
+/*ITENS DO MENU FILHO*/
+.itens-menu{
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/*ELEMENTOS A DO ITENS MENU*/
+.menu-speed>.links-menu>a{
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  margin: 2rem;
+  font-family:var(--fonte-title--);
+  color: #ffff;
+  text-transform:capitalize;
+  transition: all .4s;
+  text-decoration: none;
+}
+.links-menu>a:hover{
+  text-decoration: underline;
+}
+/*ICONES DOS ITENS MENU*/
+.menu-speed>.icones-car-busca>i{
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all .4s;
+}
+/*LOGO PAGINA*/
+.itens-menu>img{
+  border-radius: .4rem;
+  width: 50px;
+  float: right;
+}
+/*ANIMAÇÃO NOS ELEMENTOS DO MENU*/
+.menu-speed>.links-menu>a:hover,
+.menu-speed>.icones-car-busca>i:hover{
+  transform: scale(1.4);
+}
+
+/*SESSAO HEADER*/
+
+.sessao-header{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.header-info{
+  height: 100%;
+  width: 100%;
+}
+.background-img{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.background-img>img{
+  animation: anima-img-header 10s infinite;
+  height: 100%;
+  width: 100%;
+  opacity: .4 ;
+}
+@keyframes anima-img-header{
+  0%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.descri-header{
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+}
+.descri-header>h1{
+  color: #ffff;
+  font-size: 30px;
+  font-family: var(--fonte-subtitle--);
+}
+.descri-header>p{
+  font-size: 40px;
+  font-family: var(--fonte-title--);
+  color: #ffff;
+  margin: .4rem 0;
+}
+.descri-header>a{
+  display: block;
+  font-size: 25px;
+  font-family: var(--fonte-title--);
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border: solid 1px #fff;
+  width: 30%;
+  padding:.4rem;
+  border-radius: .4rem;
+  transition: all .1s;
+}
+.descri-header>a:hover{
+  background-color: transparent;
+  color: #fff;
+
+}
+
+/*SESSAO PRINCIPAL - SOBRE*/
+
+.sessao-principal{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(31, 32, 39);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-wrapper-sobre{
+  position: relative;
+  width: 90%;
+  height: 30rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-wrapper-sobre>.img-card{
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+}
+.card-wrapper-sobre>.img-card>img{
+  height: 100%;
+  border-radius: .4rem;
+}
+
+.card-wrapper-sobre>.descri-card-sobre>p{
+  margin: 30px;
+  color: #fff;
+  font-family: var(--fonte-subtitle--);
+}
+.descri-card-sobre>a{
+  display: block;
+  width: 8rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--fonte-buttom--);
+  color: #fff;
+  padding: .4rem .4rem;
+  border-radius: .4rem;
+  margin: 30px;
+  background-color: rgb(84, 106, 181);
+  transition: all .4s;
+}
+.descri-card-sobre>a:hover{
+  transform:scale(1.2)
+}
+/*SESSAO MENU*/
+.sessao-menu{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(31, 32, 39);
+  overflow: hidden;
+}
+
+.card-wrapper-gallery{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-wrapper-gallery>.card{
+  background-color: rgba(87, 71, 71, 0.227);
+  width: 30%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #fff;
+  border-radius: .4rem;
+  transition: .5s;
+}
+.card-wrapper-gallery>.card:hover{
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.card-wrapper-gallery>.card>h4{
+  font-family: var(--fonte-title--);
+  font-size: 40px;
+}
+.card-wrapper-gallery>.card>p{
+  font-family: var(--fonte-subtitle--);
+}
+.card-wrapper-gallery>.card>button{
+  border: none;
+  background-color: #07a;
+  width: 40%;
+  padding: .4rem .4rem;
+  cursor: pointer;
+  border-radius: .3rem;
+  color: #fff;
+  font-family: var(--fonte-buttom--);
+  font-size: 15px;
+  margin: 10px;
+}
+
+
+/*SESSAO PRODUTOS*/
+.sessao-produtos{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(31, 32, 39);
+  display: flex;
+  flex-direction: column;
+}
+.card-wrapper-produtos{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.card-wrapper-produtos>.card-produtos{
+  background-color: rgba(87, 71, 71, 0.227);
+  width:20%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .4rem;
+}
+.card-produtos>.descri-produto>h1{
+  font-family: var(--fonte-title--);
+  color: #fff;
+  font-size: 30px;
+}
+.card-produtos>.descri-produto>p{
+  font-family: var(--fonte-subtitle--);
+  color: #fff;
+  font-size: 20px;
+}
+.descri-produto>button{
+  border: none;
+  padding: .4rem .4rem;
+  cursor: pointer;
+}
