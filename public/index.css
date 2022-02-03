@@ -296,6 +296,15 @@ body::-webkit-scrollbar-track{
   justify-content: center;
   align-items: center;
   border-radius: .4rem;
+  transition: all .4s;
+}
+.card-produtos:hover{
+  background-color: #fff;
+  transform: scale(1.1);
+}
+.card-produtos:hover>.descri-produto>h1,
+.card-produtos:hover>.descri-produto>p{
+  color: #000;
 }
 .card-produtos>.descri-produto>h1{
   font-family: var(--fonte-title--);
@@ -311,4 +320,177 @@ body::-webkit-scrollbar-track{
   border: none;
   padding: .4rem .4rem;
   cursor: pointer;
+}
+
+.descri-produto>.btn-produto{
+  border: none;
+  background-color: rgb(78, 85, 112);
+  color:#fff ;
+  border-radius: .4rem;
+  padding: .4rem .4rem;
+  font-family: var(--fonte-buttom--);
+  margin: 10px 0;
+}
+
+/*SESSAO LOCALIZACAO*/
+
+.sessao-contato{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(31, 32,39);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+iframe{
+  border-radius: .4rem;
+  transition: all .4s;
+  width: 100%;
+}
+.mapa-local-contato{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formulario-contato{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(38, 38, 38);
+  border-radius: .4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo-site{
+  position: absolute;
+  top: 1rem;
+}
+
+.info-form{
+  position: absolute;
+  top: 5rem;
+  width: 60%;
+  padding: .4rem .4rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.info-form>input{
+  color: #fff;
+  font-family: var(--fonte-title--);
+  border: none;
+  padding: .4rem .4rem;
+  font-size: 20px;
+  margin: .5rem;
+  outline: none;
+  background: transparent;
+  border-bottom: dashed rgb(255, 255, 255);
+}
+::placeholder{
+  color: #fff;
+  font-family: var(--fonte-title--);
+  font-size: 20px;
+}
+.info-form>input[type="submit"]{
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(52, 110, 135);
+  border-radius: .2rem;
+  padding: .5rem .5rem;
+}
+.info-form>.name-login-options{
+  color: #fff;
+  margin: 1rem;
+  font-family: var(--fonte-subtitle--);
+}
+.name-login-options::after,
+.name-login-options::before{
+  content: "";
+  width: 4rem;
+  align-items: center;
+  height: 1px;
+  margin: 4px;
+  display: inline-block;
+  background-color: #fff;
+}
+
+.contato-redes{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contato-redes>.facebook-login>button{
+  display: flex;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(12, 14, 73);
+  color: #fff;
+  width: 10rem;
+  text-shadow: 1px 1px 1px #000;
+  border-radius:.4rem ;
+  font-family: var(--fonte-buttom--);
+  padding: .7rem .4rem;
+  transition: all .4s;
+}
+.facebook-login>button>i{
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+.contato-redes>.google-login>button{
+  display: flex;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  font-family: var(--fonte-buttom--);
+  border-radius:.4rem ;
+  padding: .6rem .4rem;
+  text-shadow: 1px 1px 1px #000;
+  background-color: burlywood;
+  color: #fff;
+  transition: all .4s;
+}
+.google-login>button:hover,
+.facebook-login>button:hover{
+  transform:scale(1.1);
+}
+.google-login>button>i{
+  margin: 0 5px;
+  font-size: 15px;
+}
+
+.esqueci-senha{
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-family: var(--fonte-buttom--);
+  font-size: 15px;
+  cursor: pointer;
+}
+.esqueci-senha:hover{
+  text-decoration: underline;
+}
+
+.rodape-site{
+  width: 100%;
+  height: 10rem;
+  background-color: rgb(26, 26, 26);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fonte-title--);
+  font-size: 20px;
+}
+.redes-footer>i{
+  cursor: pointer;
+  margin: .4rem 0;
 }
