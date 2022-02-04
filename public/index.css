@@ -50,6 +50,78 @@ body::-webkit-scrollbar-track{
   color: #ffff;
   z-index: 1;
 }
+.element-search{
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
+  outline: none;
+  height: 2rem ;
+  transform: translate3d(100rem,0,0);
+  width: 15rem;
+  transition: all .4s;
+  opacity: 0;
+}
+.element-search::placeholder{
+  color: #000;
+}
+.element-search.display{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+/*ITENS CARRINHO*/
+.itens-car{
+  height: 90vh;
+  overflow-y: auto;
+  width: 20rem;
+  top: 4rem;
+  position: absolute;
+  background-color: rgb(41, 41, 53);
+  right: 0;
+  z-index: 1;
+  transition: all .4s;
+  transform: translate3d(30rem,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qtd-car{
+  color: #fff;
+}
+.itens-car.car-div{
+  transform: translate3d(0,0,0);
+}
+.itens-car>.total{
+  position: absolute;
+  top: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.total>li{
+  background-color: rgb(58, 58, 75);
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: .4rem;
+  border: solid 1px #fff;
+}
+
+.compra-total-card-wrapper{
+  position: absolute;
+  top: 0;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #07a;
+  display: flex;
+  font-family: var(--fonte-title--);
+  font-size: 20px;
+}
+.total-preco{
+  margin: 1rem;
+}
 
 .img-logo{
   cursor: pointer;
@@ -85,6 +157,7 @@ body::-webkit-scrollbar-track{
   font-size: 20px;
   transition: all .4s;
 }
+
 /*LOGO PAGINA*/
 .itens-menu>img{
   border-radius: .4rem;
@@ -178,7 +251,31 @@ body::-webkit-scrollbar-track{
   align-items: center;
   overflow: hidden;
 }
+/*DATA ANIME - ANIMACAO*/
+[data-anime]{
+  opacity: 0;
+  transition: all .7s;
+}
+[data-anime="left"]{
+  transform: translate3d(-200rem,0,0);
+}
+[data-anime="right"]{
+  transform: translate3d(200rem,0,0);
+  
+}
+[data-anime="bottom"]{
+  transform: translate3d(0,100rem,0);
+}
 
+[data-anime="top"]{
+  transform: translate3d(0,-100rem,0);
+}
+
+
+[data-anime].animacao{
+  transform: translate3d(0,0,0);
+  opacity: 1; 
+}
 .card-wrapper-sobre{
   position: relative;
   width: 90%;

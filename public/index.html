@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link rel="shortcut icon" href="../img/logo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
+  <script defer src="carrinho.js"></script>
+  <script defer src="data-anime.js"></script>
   <script defer src="index.js"></script>
+  <script defer src="search-animation.js"></script>
 </head>
 <body>
 
@@ -28,8 +31,24 @@
       </div>
 
     <div class="icones-car-busca">
-      <i class="fas fa-search"></i>
-      <i class="fas fa-cart-plus"></i>
+      <i id="icone-search" class="fas fa-search"></i>
+      <input class="element-search" type="text" 
+      placeholder="Pesquise aqui">
+      <i id="icone-cart" class="fas fa-cart-plus"></i>
+    </div>
+
+    <div class="itens-car">
+
+      <div class="compra-total-card-wrapper">
+        <h1 for="total-preco">Valor total:</h1>
+        <h3 class="total-preco">00,00</h3>
+        
+      </div>
+        <div class="total">
+
+          </div>
+  
+      
     </div>
         
   </nav>
@@ -56,13 +75,14 @@
   <!-- INICIO - SESSAO PRINCIPAL -->
     <section class="sessao-principal" id="sobre">
       <h1 class="title-section">Sobre</h1>
-      <div class="card-wrapper-sobre">
+
+      <div class="card-wrapper-sobre" data-anime="bottom">
         
-          <div class="img-card" data-anime="left">
+          <div class="img-card">
             <img src="../img/blog-1.jpeg" alt="">
           </div>
 
-          <div class="descri-card-sobre" data-anime="right">
+          <div class="descri-card-sobre">
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Veritatis eveniet ipsum pariatur nemo laudantium 
@@ -82,7 +102,7 @@
     <section class="sessao-menu" id="menu">
       <h1 class="title-section">Menu</h1>
         <div class="card-wrapper-gallery">
-          <div class="card">
+          <div class="card" data-anime="left">
             <div class="img-card-gallery">
               <img src="../img/menu-1.png" alt="">
             </div>
@@ -90,7 +110,7 @@
             <p>R$ 15,99</p>
             <button class="btn-car">Adicionar ao Carrinho</button>
           </div>
-          <div class="card">
+          <div class="card" data-anime="top">
             <div class="img-card-gallery">
               <img src="../img/menu-2.png" alt="">
             </div>
@@ -98,7 +118,7 @@
             <p>R$ 15,99</p>
             <button class="btn-car">Adicionar ao Carrinho</button>
           </div>
-          <div class="card">
+          <div class="card" data-anime="right">
             <div class="img-card-gallery">
               <img src="../img/menu-3.png" alt="">
             </div>
@@ -106,7 +126,7 @@
             <p>R$ 15,99</p>
             <button class="btn-car">Adicionar ao Carrinho</button>
           </div>
-          <div class="card">
+          <div class="card" data-anime="left">
             <div class="img-card-gallery">
               <img src="../img/menu-4.png" alt="">
             </div>
@@ -114,7 +134,7 @@
             <p>R$ 15,99</p>
             <button class="btn-car">Adicionar ao Carrinho</button>
           </div>
-          <div class="card">
+          <div class="card" data-anime="bottom">
             <div class="img-card-gallery">
               <img src="../img/menu-5.png" alt="">
             </div>
@@ -122,7 +142,7 @@
             <p>R$ 15,99</p>
             <button class="btn-car">Adicionar ao Carrinho</button>
           </div>
-          <div class="card">
+          <div class="card" data-anime="right">
             <div class="img-card-gallery">
               <img src="../img/menu-6.png" alt="">
             </div>
@@ -202,9 +222,9 @@
            <div class="info-form">
 
               <input type="email" class="email" placeholder="Informe seu E-mail aqui"
-               required>
+               >
 
-               <input type="password" required class="senha"
+               <input type="password"  class="senha"
               placeholder="Informe sua senha">
 
               <input type="submit" class="btn-form-contato"
