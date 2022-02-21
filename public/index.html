@@ -21,12 +21,17 @@
       <div class="img-logo">
         <img width="70px"  src="../img/logo.png" alt="">
       </div>
-      <i class="fa-solid fa-bars"></i>
+
+      <div class="menu-bar">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+      </div>
+
       <div class="links-menu">
         <a href="#home">Home</a>
         <a href="#sobre">Sobre</a>
         <a href="#menu">Menu</a>
-        <a href="#produto">Produtos</a>
         <a href="#contato">Contato</a>
       </div>
 
@@ -34,13 +39,14 @@
       <i id="icone-search" class="fas fa-search"></i>
       <input class="element-search" type="text" 
       placeholder="Pesquise aqui">
-      <i id="icone-cart" class="fas fa-cart-plus"></i>
+      
     </div>
+    <i id="icone-cart" class="fas fa-cart-plus"></i>
 
     <div class="itens-car">
 
       <div class="compra-total-card-wrapper">
-        <h1 for="total-preco">Valor total:</h1>
+        <h1 for="total-preco">Total :</h1>
         <h3 class="total-preco">00,00</h3>
         
       </div>
@@ -48,11 +54,16 @@
 
           </div>
   
-      
+      <div class="finalizar-compra">
+        <button class="finish-car">Finalizar Compra</button>
+      </div>
+
     </div>
         
   </nav>
   <!-- FINALIZANDO MENU -->
+
+
 
   <!-- INICIO - SESSAO HEADER -->
     <header class="sessao-header" id="home">
@@ -104,99 +115,61 @@
         <div class="card-wrapper-gallery">
           <div class="card" data-anime="left">
             <div class="img-card-gallery">
-              <img src="../img/menu-1.png" alt="">
+              <img  class="img-card" src="../img/menu-1.png" alt="">
             </div>
-            <h4>Tasy And Healty</h4>
-            <p class="value-element">R$ 15,99</p>
-            <button class="btn-car">Adicionar ao Carrinho</button>
+            <h4 class="title-card">Tasy And Healty 1</h4>
+            <p class="value-element">R$ 15,00</p>
+            <button class="btn-car">Adicionar</button>
           </div>
+
           <div class="card" data-anime="top">
             <div class="img-card-gallery">
-              <img src="../img/menu-2.png" alt="">
+              <img  class="img-card" src="../img/menu-2.png" alt="">
             </div>
-            <h4>Tasy And Healty</h4>
+            <h4 class="title-card">Tasy And Healty 2</h4>
             <p class="value-element">R$ 15,99</p>
-            <button class="btn-car">Adicionar ao Carrinho</button>
+            <button class="btn-car">Adicionar</button>
           </div>
+
           <div class="card" data-anime="right">
             <div class="img-card-gallery">
-              <img src="../img/menu-3.png" alt="">
+              <img  class="img-card" src="../img/menu-3.png" alt="">
             </div>
-            <h4>Tasy And Healty</h4>
-            <p class="value-element">R$ 15,99</p>
-            <button class="btn-car">Adicionar ao Carrinho</button>
+            <h4 class="title-card">Tasy And Healty 3</h4>
+            <p class="value-element">R$ 16,00</p>
+            <button class="btn-car">Adicionar</button>
           </div>
+
           <div class="card" data-anime="left">
             <div class="img-card-gallery">
-              <img src="../img/menu-4.png" alt="">
+              <img  class="img-card" src="../img/menu-4.png" alt="">
             </div>
-            <h4>Tasy And Healty</h4>
-            <p class="value-element">R$ 15,99</p>
-            <button class="btn-car">Adicionar ao Carrinho</button>
+            <h4 class="title-card">Tasy And Healty 4</h4>
+            <p class="value-element">R$ 14,99</p>
+            <button class="btn-car">Adicionar</button>
           </div>
+
           <div class="card" data-anime="bottom">
             <div class="img-card-gallery">
-              <img src="../img/menu-5.png" alt="">
+              <img  class="img-card" src="../img/menu-5.png" alt="">
             </div>
-            <h4>Tasy And Healty</h4>
-            <p class="value-element">R$ 15,99</p>
-            <button class="btn-car">Adicionar ao Carrinho</button>
+            <h4 class="title-card">Tasy And Healty 5</h4>
+            <p class="value-element">R$ 11,99</p>
+            <button class="btn-car">Adicionar</button>
           </div>
+
           <div class="card" data-anime="right">
             <div class="img-card-gallery">
-              <img src="../img/menu-6.png" alt="">
+              <img  class="img-card" src="../img/menu-6.png" alt="">
             </div>
-            <h4>Tasy And Healty</h4>
-            <p class="value-element">R$ 15,99</p>
-            <button class="btn-car">Adicionar ao Carrinho</button>
+            <h4 class="title-card">Tasy And Healty 6</h4>
+            <p class="value-element">R$ 10,99</p>
+            <button class="btn-car">Adicionar</button>
           </div>
+
         </div>
     </section>
   <!-- FINALIZANDO - SESSAO MENU -->
-
-
-  <!-- INICIO - SESSAO PRODUTOS -->
-    <section class="sessao-produtos" id="produto">
-      <h1 class="title-section">Produtos</h1>
-      <div class="card-wrapper-produtos">
-
-        <div class="card-produtos">
-          <div class="img-produto">
-            <img src="../img/product-1.png" alt="">
-          </div>
-          <div class="descri-produto">
-            <h1>Fresh coffe</h1>
-            <p>R$ 15,99</p>
-            <button class="btn-produto">Adicionar ao carrinho</button>
-          </div>
-        </div>
-
-        <div class="card-produtos">
-          <div class="img-produto">
-            <img src="../img/product-2.png" alt="">
-          </div>
-          <div class="descri-produto">
-            <h1>Fresh coffe</h1>
-            <p>R$ 15,99</p>
-            <button class="btn-produto">Adicionar ao carrinho</button>
-          </div>
-        </div>
-
-        <div class="card-produtos">
-          <div class="img-produto">
-            <img src="../img/product-3.png" alt="">
-          </div>
-          <div class="descri-produto">
-            <h1>Fresh coffe</h1>
-            <p>R$ 15,99</p>
-            <button class="btn-produto">Adicionar ao carrinho</button>
-          </div>
-        </div>
-      </div>
-    </section>
-  <!-- FINALIZANDO - SESSAO PRODUTOS -->
-
-
 
   <!-- INICIO - SESSAO CONTATO -->
     <section class="sessao-contato" id="contato">

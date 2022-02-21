@@ -75,7 +75,7 @@ body::-webkit-scrollbar-track{
   width: 20rem;
   top: 4rem;
   position: absolute;
-  background-color: rgb(41, 41, 53);
+  background-color: rgb(69, 69, 75);
   right: 0;
   z-index: 1;
   transition: all .4s;
@@ -99,9 +99,21 @@ body::-webkit-scrollbar-track{
   justify-content: center;
   text-align: center;
 }
+.itens-car::-webkit-scrollbar{
+  width: 1rem;
+}
+.itens-car::-webkit-scrollbar-thumb{
+  background-color: rgb(86, 92, 104);
+}
+.itens-car::-webkit-scrollbar-track{
+  background-color: rgb(58, 79, 100);
+  border-radius: .4rem;
+}
 .total>li{
+  position: relative;
+  top: 3rem;
   background-color: rgb(58, 58, 75);
-  margin: 1rem;
+  margin: .4rem;
   padding: 1rem 2rem;
   border-radius: .4rem;
   border: solid 1px #fff;
@@ -122,12 +134,33 @@ body::-webkit-scrollbar-track{
 .total-preco{
   margin: 1rem;
 }
-
+.finalizar-compra{
+  position: absolute;
+  top: 3rem;
+  left: 5.4rem;
+}
+.finalizar-compra>button{
+  border: none;
+  padding: .4rem .4rem;
+  color: #fff;
+  outline: none;
+  transition: .2s;
+  cursor: pointer;
+  font-family: var(--fonte-subtitle--);
+  background-color: rgba(81, 81, 151, 0.667);
+  border-radius: 3px;
+}
+.finalizar-compra>button:hover{
+  transform: scale(1.2);
+  color:rgba(81, 81, 151, 0.667) ;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 1rem #7ad;
+}
 .img-logo{
   cursor: pointer;
 }
 /*ITENS DO MENU FILHO*/
-.fa-bars{
+.menu-bar{
   display: none;
 }
 .itens-menu{
@@ -159,6 +192,14 @@ body::-webkit-scrollbar-track{
   cursor: pointer;
   font-size: 20px;
   transition: all .4s;
+}
+.fa-cart-plus{
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.fa-cart-plus:hover{
+  transform: scale(1.4);
 }
 
 /*LOGO PAGINA*/
@@ -341,7 +382,7 @@ body::-webkit-scrollbar-track{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin:1rem;
   color: #fff;
   border-radius: .4rem;
   transition: .5s;
@@ -354,7 +395,7 @@ body::-webkit-scrollbar-track{
 
 .card-wrapper-gallery>.card>h4{
   font-family: var(--fonte-title--);
-  font-size: 40px;
+  font-size: 30px;
 }
 .card-wrapper-gallery>.card>p{
   font-family: var(--fonte-subtitle--);
@@ -370,67 +411,6 @@ body::-webkit-scrollbar-track{
   font-family: var(--fonte-buttom--);
   font-size: 15px;
   margin: 10px;
-}
-
-
-/*SESSAO PRODUTOS*/
-.sessao-produtos{
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(31, 32, 39);
-  display: flex;
-  flex-direction: column;
-}
-.card-wrapper-produtos{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-.card-wrapper-produtos>.card-produtos{
-  background-color: rgba(87, 71, 71, 0.227);
-  width:20%;
-  height: 30rem;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: .4rem;
-  transition: all .4s;
-}
-.card-produtos:hover{
-  background-color: #fff;
-  transform: scale(1.1);
-}
-.card-produtos:hover>.descri-produto>h1,
-.card-produtos:hover>.descri-produto>p{
-  color: #000;
-}
-.card-produtos>.descri-produto>h1{
-  font-family: var(--fonte-title--);
-  color: #fff;
-  font-size: 30px;
-}
-.card-produtos>.descri-produto>p{
-  font-family: var(--fonte-subtitle--);
-  color: #fff;
-  font-size: 20px;
-}
-.descri-produto>button{
-  border: none;
-  padding: .4rem .4rem;
-  cursor: pointer;
-}
-
-.descri-produto>.btn-produto{
-  border: none;
-  background-color: rgb(78, 85, 112);
-  color:#fff ;
-  border-radius: .4rem;
-  padding: .4rem .4rem;
-  font-family: var(--fonte-buttom--);
-  margin: 10px 0;
 }
 
 /*SESSAO LOCALIZACAO*/
@@ -616,6 +596,11 @@ iframe{
     flex-direction: column;
   }
 }
+@media(max-width:979px){
+  .sessao-menu{
+    height: 170vh;
+  }   
+}
 @media(max-width:898px){
   .sessao-contato{
     height: 150vh;
@@ -635,7 +620,10 @@ iframe{
 @media(max-width:778px){
   .links-menu{
     display: none;
-    transition: .4s;
+  }
+  #icone-cart{
+    display: block;
+    cursor: pointer;
   }
   .icones-car-busca{
     display: none;
@@ -644,9 +632,21 @@ iframe{
     display: flex;
     justify-content: space-around;
   }
-  .fa-bars{
+  .menu-bar{
     display: block;
+    width: 2.4rem;
+    height: 1rem;
+    z-index: 1;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+
+  .menu-bar>.lines{
+    width: 2rem;
+    margin:3px;
+    height: .1rem;
+    background-color: #fff;
   }
   .links-menu.menu-animation{
     display: flex;
@@ -656,5 +656,12 @@ iframe{
     right: 0;
     top: 4rem;
     height: 100vh;
+  }
+}
+
+@media(max-width:723px){
+  .card-wrapper-gallery{
+    display: flex;
+    flex-wrap: wrap;
   }
 }

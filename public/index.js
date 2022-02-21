@@ -3,7 +3,7 @@ document.querySelector(".btn-form-contato")
   event.preventDefault();
 })
 
-document.querySelector(".fa-bars")
+document.querySelector(".menu-bar")
 .addEventListener("click",()=>{
   document.querySelector(".links-menu")
   .classList.toggle("menu-animation")
