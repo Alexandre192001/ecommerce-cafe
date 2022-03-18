@@ -378,7 +378,7 @@ body::-webkit-scrollbar-track{
 }
 /*SESSAO MENU*/
 .sessao-menu{
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-color: rgb(31, 32, 39);
   overflow: hidden;
