@@ -236,21 +236,19 @@ body::-webkit-scrollbar-track{
   position: relative;
   height: 100vh;
   width: 100%;
+  background-color: #000;
   overflow: hidden;
 }
 .header-info{
   height: 100%;
   width: 100%;
 }
-.background-img{
-  height: 100%;
-  width: 100%;
-  background-color: black;
-}
-.background-img>img{
+
+.header-info>img{
   animation: anima-img-header 10s infinite;
   height: 100%;
   width: 100%;
+  object-fit: cover;
   opacity: .4 ;
 }
 @keyframes anima-img-header{
