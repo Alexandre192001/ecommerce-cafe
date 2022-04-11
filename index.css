@@ -72,11 +72,12 @@ body::-webkit-scrollbar-track{
 .itens-car{
   height: 90vh;
   overflow-y: auto;
-  width: 50rem;
+  width: 90%;
   top: 4rem;
   position: absolute;
   background-color: rgb(69, 69, 75);
   right: 0;
+  opacity: 0;
   z-index: 1;
   transition: all .4s;
   transform: translate3d(80rem,0,0);
@@ -89,6 +90,7 @@ body::-webkit-scrollbar-track{
 }
 .itens-car.car-div{
   transform: translate3d(0,0,0);
+  opacity: 1;
 }
 .itens-car>.total{
   position: absolute;
@@ -386,6 +388,7 @@ body::-webkit-scrollbar-track{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .card-wrapper-gallery>.card{
@@ -396,7 +399,7 @@ body::-webkit-scrollbar-track{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:1rem;
+
   color: #fff;
   border-radius: .4rem;
   transition: .5s;
@@ -708,7 +711,7 @@ iframe{
 @media(max-width:532px){
   
   .card-wrapper-sobre>.img-card>img{
-    width:10rem;
+    width:90%;
   }
   .card-wrapper-gallery>.card>.title-card,
   .card-wrapper-gallery>.card>.value-element{
