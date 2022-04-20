@@ -396,10 +396,11 @@ body::-webkit-scrollbar-track{
   width: 30%;
   height: 15rem;
   display: flex;
+  margin:.5rem;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: #fff;
   border-radius: .4rem;
   transition: .5s;
@@ -633,7 +634,7 @@ iframe{
 }
 @media(max-width:979px){
   .sessao-menu{
-    height: 170vh;
+    height: 100vh;
   }   
 }
 @media(max-width:898px){
@@ -652,10 +653,20 @@ iframe{
     
 }
 
+@media(max-width:819px){
+ .sessao-menu{
+   height: 150vh;
+ }
+ .sessao-menu>.card-wrapper-gallery>.card{
+   width: 40%;
+ }
+}
+
 @media(max-width:778px){
   .links-menu{
     display: none;
   }
+  
   #icone-cart{
     display: block;
     cursor: pointer;
