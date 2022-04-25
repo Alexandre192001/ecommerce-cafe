@@ -93,6 +93,8 @@ body::-webkit-scrollbar-track{
   opacity: 1;
 }
 .itens-car>.total{
+  font-family: var(--fonte-title--);
+  font-size:20px;
   position: absolute;
   top: 2rem;
   list-style: none;
