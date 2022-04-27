@@ -161,7 +161,7 @@ body::-webkit-scrollbar-track{
 }
 .finalizar-compra>button{
   border: none;
-  padding: .4rem .4rem;
+  padding: .2rem .2rem;
   color: #fff;
   outline: none;
   transition: .2s;
@@ -171,10 +171,9 @@ body::-webkit-scrollbar-track{
   border-radius: 3px;
 }
 .finalizar-compra>button:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
   color:rgba(81, 81, 151, 0.667) ;
   background-color: #fff;
-  box-shadow: inset 1px 1px 1rem #7ad;
 }
 .img-logo{
   cursor: pointer;
