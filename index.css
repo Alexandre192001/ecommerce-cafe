@@ -734,5 +734,9 @@ iframe{
     font-size: 10px;
     
   }
+  .finalizar-compra{
+    left: 0;
+    width: 10%;
+  }
   
 }

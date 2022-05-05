@@ -1,3 +1,5 @@
+"use strict"
+
 /*CHAMADA DO BANNER CARRINHO*/
 document.getElementById("icone-cart").addEventListener("click"
 ,()=>{
@@ -7,55 +9,55 @@ document.getElementById("icone-cart").addEventListener("click"
 /*CARRINHO DE COMPRAS*/
 const Clickbutton = document.querySelectorAll('.btn-car')
 const tbody = document.querySelector('.tbody-table')
-let carrito = []
+let carinho = []
 
 Clickbutton.forEach(btn => {
-  btn.addEventListener('click', addToCarritoItem)
+  btn.addEventListener('click', addTocarinhoItem)
 })
 
 
-function addToCarritoItem(e){
+function addTocarinhoItem(e){
   const button = e.target
   const item = button.closest('.card')
   const itemTitle = item.querySelector('.title-card').textContent;
-  const itemPrice = item.querySelector('.value-element').textContent;
+  const itempreco = item.querySelector('.value-element').textContent;
   const itemImg = item.querySelector('.img-card').src;
   
   const newItem = {
     title: itemTitle,
-    precio: itemPrice,
+    preco: itempreco,
     img: itemImg,
-    cantidad: 1
+    quantidade: 1
   }
 
-  addItemCarrito(newItem)
+  addItemcarinho(newItem)
 }
 
 
-function addItemCarrito(newItem){
+function addItemcarinho(newItem){
 
-  const InputElemnto = tbody.getElementsByClassName('input__elemento')
-  for(let i =0; i < carrito.length ; i++){
-    if(carrito[i].title.trim() === newItem.title.trim()){
-      carrito[i].cantidad ++;
-      const inputValue = InputElemnto[i]
+  const elementoInput = tbody.getElementsByClassName('input__elemento')
+  for(let i =0; i < carinho.length ; i++){
+    if(carinho[i].title.trim() === newItem.title.trim()){
+      carinho[i].quantidade ++;
+      const inputValue = elementoInput[i]
       inputValue.value++;
-      CarritoTotal()
+      carinhoTotal()
       return null;
     }
   }
   
-  carrito.push(newItem)
+  carinho.push(newItem)
   
-  renderCarrito()
+  rendercarinho()
 } 
 
 
-function renderCarrito(){
+function rendercarinho(){
   tbody.innerHTML = ''
-  carrito.map(item => {
+  carinho.map(item => {
     const tr = document.createElement('tr')
-    tr.classList.add('ItemCarrito')
+    tr.classList.add('Itemcarinho')
     const Content = `
     
     <th scope="row">1</th>
@@ -63,9 +65,9 @@ function renderCarrito(){
               <img src=${item.img}  alt="">
               <h6 class="title">${item.title}</h6>
             </td>
-            <td class="table__price"><p>${item.precio}</p></td>
-            <td class="table__cantidad">
-              <input type="number" min="1" value=${item.cantidad} class="input__elemento">
+            <td class="table__price"><p>${item.preco},00</p></td>
+            <td class="table__quantidade">
+              <input type="number" min="1" value=${item.quantidade} class="input__elemento">
               <button class="delete">x</button>
             </td>
     
@@ -73,48 +75,47 @@ function renderCarrito(){
     tr.innerHTML = Content;
     tbody.append(tr)
 
-    tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
-    tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
+    tr.querySelector(".delete").addEventListener('click', removeItemcarinho)
+    tr.querySelector(".input__elemento").addEventListener('change', somaquantidade)
   })
-  CarritoTotal()
+  carinhoTotal()
 }
 
-function CarritoTotal(){
+function carinhoTotal(){
   let Total = 0;
   const itemCartTotal = document.querySelector('.total-preco')
-  carrito.forEach((item) => {
-    const precio = Number(item.precio.replace("$", ''))
-    Total = Total + precio*item.cantidad
+  carinho.forEach((item) => {
+    const preco = Number(item.preco.replace("$",''))
+    Total = Total + preco*item.quantidade
   })
 
-  itemCartTotal.innerHTML = `Total: ${Total}`
-  addLocalStorage()
+  itemCartTotal.innerHTML = `Total: ${Total},00`
 }
 
-function removeItemCarrito(e){
+function removeItemcarinho(e){
   const buttonDelete = e.target
-  const tr = buttonDelete.closest(".ItemCarrito")
+  const tr = buttonDelete.closest(".Itemcarinho")
   const title = tr.querySelector('.title').textContent;
-  for(let i=0; i<carrito.length ; i++){
+  for(let i=0; i<carinho.length ; i++){
 
-    if(carrito[i].title.trim() === title.trim()){
-      carrito.splice(i, 1)
+    if(carinho[i].title.trim() === title.trim()){
+      carinho.splice(i, 1)
     }
   }
 
   tr.remove()
-  CarritoTotal()
+  carinhoTotal()
 }
 
-function sumaCantidad(e){
-  const sumaInput  = e.target
-  const tr = sumaInput.closest(".ItemCarrito")
+function somaquantidade(e){
+  const somaInput  = e.target
+  const tr = somaInput.closest(".Itemcarinho")
   const title = tr.querySelector('.title').textContent;
-  carrito.forEach(item => {
+  carinho.forEach(item => {
     if(item.title.trim() === title){
-      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
-      item.cantidad = sumaInput.value;
-      CarritoTotal()
+      somaInput.value < 1 ?  (somaInput.value = 1) : somaInput.value;
+      item.quantidade = somaInput.value;
+      carinhoTotal()
     }
   })
 }
