@@ -14,7 +14,7 @@
 <hr>
 <h2>⚜️Funcionalidades:⚜️</h2>
 <ul>
-<li>Adicionar - (Café no carrinho) - Basta clicar no botão adicionar, para que  o item clicado, seja adicionado no carrinho;</li>
+<li>Adicionar (Café no carrinho) - Basta clicar no botão adicionar, para que  o item clicado, seja adicionado no carrinho;</li>
 <li>Remover (Carrinho de compras) - Aqui você consegue remover  o elemento do carrinho</li>
 <li>Sidebar (Menu) - Clicando nele, ele trará o menu de navegação para o usuário navegar da melhor forma pela site.</li>
 </ul>
