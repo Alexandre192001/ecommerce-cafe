@@ -1,5 +1,3 @@
-"use strict"
-
 /*CHAMADA DO BANNER CARRINHO*/
 document.getElementById("icone-cart").addEventListener("click"
 ,()=>{
