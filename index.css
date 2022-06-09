@@ -38,6 +38,32 @@ body::-webkit-scrollbar-track{
   color: rgb(153, 119, 74);
 }
 
+/*DATA ANIME - ANIMACAO*/
+[data-anime]{
+  opacity: 0;
+  transition: all .7s;
+}
+[data-anime="left"]{
+  transform: translate3d(-200rem,0,0);
+}
+[data-anime="right"]{
+  transform: translate3d(200rem,0,0);
+  
+}
+[data-anime="bottom"]{
+  transform: translate3d(0,100rem,0);
+}
+
+[data-anime="top"]{
+  transform: translate3d(0,-100rem,0);
+}
+
+
+[data-anime].animacao{
+  transform: translate3d(0,0,0);
+  opacity: 1; 
+}
+
 /*ELEMENTO PAI DO MENU*/
 .menu-speed{
   position: fixed;
@@ -157,7 +183,7 @@ body::-webkit-scrollbar-track{
 .finalizar-compra{
   position: absolute;
   top: .4rem;
-  right: 2rem;
+  right: 3rem;
 }
 .finalizar-compra>button{
   border: none;
@@ -233,11 +259,16 @@ body::-webkit-scrollbar-track{
   transform: scale(1.4);
 }
 
+/* Container principal*/
+.container{
+  min-height:100vh;
+  width: 100%;
+}
 /*SESSAO HEADER*/
 
 .sessao-header{
   position: relative;
-  height: 100vh;
+  height: 40rem;
   width: 100%;
   background-color: #000;
   overflow: hidden;
@@ -303,7 +334,7 @@ body::-webkit-scrollbar-track{
 /*SESSAO PRINCIPAL - SOBRE*/
 
 .sessao-principal{
-  height: 100vh;
+  height: 40rem;
   width: 100%;
   background-color: rgb(31, 32, 39);
   display: flex;
@@ -312,31 +343,7 @@ body::-webkit-scrollbar-track{
   align-items: center;
   overflow: hidden;
 }
-/*DATA ANIME - ANIMACAO*/
-[data-anime]{
-  opacity: 0;
-  transition: all .7s;
-}
-[data-anime="left"]{
-  transform: translate3d(-200rem,0,0);
-}
-[data-anime="right"]{
-  transform: translate3d(200rem,0,0);
-  
-}
-[data-anime="bottom"]{
-  transform: translate3d(0,100rem,0);
-}
 
-[data-anime="top"]{
-  transform: translate3d(0,-100rem,0);
-}
-
-
-[data-anime].animacao{
-  transform: translate3d(0,0,0);
-  opacity: 1; 
-}
 .card-wrapper-sobre{
   position: relative;
   width: 90%;
@@ -379,7 +386,7 @@ body::-webkit-scrollbar-track{
 }
 /*SESSAO MENU*/
 .sessao-menu{
-  height: 120vh;
+  height: 40rem;
   width: 100%;
   background-color: rgb(31, 32, 39);
   overflow: hidden;
@@ -393,7 +400,7 @@ body::-webkit-scrollbar-track{
 }
 
 .card-wrapper-gallery>.card{
-  background-color: rgba(87, 71, 71, 0.227);
+  background-color: rgba(106, 97, 97, 0.227);
   width: 30%;
   height: 15rem;
   display: flex;
@@ -404,12 +411,10 @@ body::-webkit-scrollbar-track{
   align-items: center;
   color: #fff;
   border-radius: .4rem;
-  transition: .5s;
+  transition: all .5s ;
 }
 .card-wrapper-gallery>.card:hover{
-  background-color: #fff;
-  color: #000;
-  transform: scale(1.1);
+  border: solid 2px #fff;
 }
 
 .card-wrapper-gallery>.card>h4{
@@ -421,21 +426,25 @@ body::-webkit-scrollbar-track{
 }
 .card-wrapper-gallery>.card>button{
   border: none;
-  background-color: #07a;
+  background-color: rgb(34, 36, 44);
   width: 50%;
   padding: .4rem .4rem;
   cursor: pointer;
   border-radius: .3rem;
   color: #fff;
-  font-family: var(--fonte-buttom--);
+  font-family: var(--fonte-subtitle--);
   font-size: 15px;
   margin: 10px;
+  transition:all .3s ease-in-out;
+}
+.card-wrapper-gallery>.card>button:hover{
+  background-color:rgb(97, 97, 97);
 }
 
 /*SESSAO LOCALIZACAO*/
 
 .sessao-contato{
-  height: 100vh;
+  height: 40rem;
   width: 100%;
   background-color: rgb(31, 32,39);
   display: flex;
@@ -635,12 +644,12 @@ iframe{
 }
 @media(max-width:979px){
   .sessao-menu{
-    height: 100vh;
+    height:40rem;
   }   
 }
 @media(max-width:898px){
   .sessao-contato{
-    height: 150vh;
+    height: 60rem;
   }
   iframe{
     height:50%;
@@ -656,10 +665,10 @@ iframe{
 
 @media(max-width:819px){
  .sessao-menu{
-   height: 150vh;
+   height: 107rem;
  }
  .sessao-menu>.card-wrapper-gallery>.card{
-   width: 40%;
+   width: 60%;
  }
 }
 
@@ -721,7 +730,13 @@ iframe{
 }
 
 @media(max-width:532px){
-  
+  .descri-header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
   .card-wrapper-sobre>.img-card>img{
     width:90%;
   }
