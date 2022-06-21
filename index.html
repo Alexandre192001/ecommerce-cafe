@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,22 +14,24 @@
   <script defer src="index.js"></script>
   <script defer src="search-animation.js"></script>
 </head>
-
 <body>
 
   <!-- INICIO MENU -->
   <nav class="menu-speed">
 
+    <!-- Logo  -->
     <div class="img-logo">
-      <img width="50px" src="img/logo.png" alt="">
+      <img width="60px" src="img/logo.png" alt="">
     </div>
 
+    <!-- Linha para o menu hamburguer -->
     <div class="menu-bar">
       <div class="lines"></div>
       <div class="lines"></div>
       <div class="lines"></div>
     </div>
 
+    <!-- Links para navegação interna -->
     <div class="links-menu">
       <a href="#home">Home</a>
       <a href="#sobre">Sobre</a>
@@ -38,13 +39,16 @@
       <a href="#contato">Contato</a>
     </div>
 
+    <!-- Icone de busca -->
     <div class="icones-car-busca">
       <i id="icone-search" class="fas fa-search"></i>
       <input class="element-search" type="text" placeholder="Pesquise aqui">
 
     </div>
+    <!-- Carrinho -->
     <i id="icone-cart" class="fas fa-cart-plus"></i>
 
+    <!-- Card de carrinho de compras -->
     <div class="itens-car">
 
       <div class="compra-total-card-wrapper">
@@ -69,26 +73,23 @@
 
         </table>
       </div>
-
+      <!-- Botão de finalizar compra -->
       <div class="finalizar-compra">
         <button class="finish-car">Finalizar Compra</button>
       </div>
-
     </div>
-
   </nav>
   <!-- FINALIZANDO MENU -->
-
-<div class="containe">
 
 
 
   <!-- INICIO - SESSAO HEADER -->
   <header class="sessao-header" id="home">
     <div class="header-info">
-
+      <!-- Imagem de fundo -->
       <img src="img/cafe.jpg" alt="img não encontrada">
 
+      <!-- Texto principal da sessão -->
       <div class="descri-header">
         <h1>FRESH COFFE IN THE MORNING</h1>
         <p>Lorem ipsum dolor sit amet consectetu</p>
@@ -99,23 +100,26 @@
   </header>
   <!-- FINALIZANDO - SESSAO HEADER -->
 
-
-
   <!-- INICIO - SESSAO PRINCIPAL -->
   <section class="sessao-principal" id="sobre">
+
+    <!-- Titulo da sessão -->
     <h1 class="title-section" data-anime="bottom">Sobre</h1>
 
+    <!-- Wrapper da sessão -->
     <div class="card-wrapper-sobre" data-anime="bottom">
 
+      <!-- Imagem ilustração -->
       <div class="img-card">
         <img src="img/blog-1.jpeg" alt="">
       </div>
 
+      <!-- Texto da imagem -->
       <div class="descri-card-sobre">
-
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Veritatis eveniet ipsum dignissimos enim excepturi voluptate, cum natus tempore earum adipisci,
           cupiditate sint laboriosam.</p>
+        <!-- Botão de navegação interna -->
         <a href="#menu">Saiba Mais</a>
       </div>
 
@@ -127,8 +131,13 @@
 
   <!-- INICIO - SESSAO MENU -->
   <section class="sessao-menu" id="menu">
+    <!-- Titulo da sessão -->
     <h1 class="title-section">Menu</h1>
+
+
+    <!-- Wrapper com cards -->
     <div class="card-wrapper-gallery">
+      <!-- Cards da sessão -->
       <div class="card" data-anime="left">
         <div class="img-card-gallery">
           <img class="img-card" src="img/menu-1.png" alt="">
@@ -189,14 +198,17 @@
 
   <!-- INICIO - SESSAO CONTATO -->
   <section class="sessao-contato" id="contato">
+    <!-- Titulo da sessão -->
     <h1 class="title-section">Contato</h1>
-
+    <!-- Wrapper do mapa -->
     <div class="mapa-local-contato">
 
+      <!-- Mapa de localização -->
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125976.15549836023!2d-36.3757866425435!3d-9.354947778171248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x706efdee6f40e8b%3A0x8f1863da9bfcf396!2sLanchonete%20bom%20Jesus!5e0!3m2!1spt-BR!2sbr!4v1645135929358!5m2!1spt-BR!2sbr"
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
+      <!-- formulario -->
       <form class="formulario-contato">
         <div class="img-logo-site">
           <img src="img/logo.png" alt="">
@@ -236,9 +248,14 @@
 
   <!-- INICIO - FOOTER -->
   <footer class="rodape-site">
+    <!-- Nome da pagina -->
     <h1>E-commerce - Café</h1>
+
+    <!-- Paragrafo do footer -->
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus aperiam cupiditate corporis doloremque
       libero facilis sunt magni quaerat. Consequatur quia</p>
+
+    <!-- Links externos - Redes sociais -->
     <a class="btn_voltar_port" href="https://frontend-alexandrejr.netlify.app/">Voltar</a>
     <div class="redes-footer">
       <a href="https://github.com/Alexandre192001"><i class="fab fa-github"></i></a>
@@ -250,7 +267,7 @@
   </footer>
   <!-- FINALIZANDO - FOOTER -->
 
-</div>
+
 </body>
 
 </html>

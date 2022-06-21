@@ -74,6 +74,7 @@ function rendercarinho(){
     tbody.append(tr)
 
     tr.querySelector(".delete").addEventListener('click', removeItemcarinho)
+
     tr.querySelector(".input__elemento").addEventListener('change', somaquantidade)
   })
   carinhoTotal()

@@ -1,36 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Shojumaru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Lobster&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Shojumaru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Lobster&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Shojumaru&display=swap");
 
 /*FONTES PREDEFINIDAS*/
-:root{
---fonte-title--:"Dongle";
---fonte-subtitle--:"Mochiy Pop P One";
---fonte-buttom--:"Lobster";
+:root {
+  --fonte-title--: "Dongle";
+  --fonte-subtitle--: "Mochiy Pop P One";
+  --fonte-buttom--: "Lobster";
 }
 /*ZERANDO VALORES PADROES*/
-*{
+* {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 /*SUAVIDADE NA ROLAGEM DO SCROLL*/
-html{
+html {
   scroll-behavior: smooth;
 }
 /*ALTERANDO SCROLL DA PAGINA*/
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 1.3rem;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: rgb(172, 124, 98);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
   background-color: black;
 }
 /*TITULO PADRAO DE TODAS AS SESSOES*/
-.title-section{
+.title-section {
   color: #fff;
   font-family: var(--fonte-title--);
   font-size: 70px;
@@ -39,63 +39,64 @@ body::-webkit-scrollbar-track{
 }
 
 /*DATA ANIME - ANIMACAO*/
-[data-anime]{
+[data-anime] {
   opacity: 0;
-  transition: all .7s;
+  transition: all 0.7s;
 }
-[data-anime="left"]{
-  transform: translate3d(-200rem,0,0);
+[data-anime="left"] {
+  transform: translate3d(-200rem, 0, 0);
 }
-[data-anime="right"]{
-  transform: translate3d(200rem,0,0);
-  
+[data-anime="right"] {
+  transform: translate3d(200rem, 0, 0);
 }
-[data-anime="bottom"]{
-  transform: translate3d(0,100rem,0);
-}
-
-[data-anime="top"]{
-  transform: translate3d(0,-100rem,0);
+[data-anime="bottom"] {
+  transform: translate3d(0, 100rem, 0);
 }
 
+[data-anime="top"] {
+  transform: translate3d(0, -100rem, 0);
+}
 
-[data-anime].animacao{
-  transform: translate3d(0,0,0);
-  opacity: 1; 
+[data-anime].animacao {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 /*ELEMENTO PAI DO MENU*/
-.menu-speed{
+.menu-speed {
   position: fixed;
   width: 100%;
   height: 4rem;
   display: flex;
   align-items: center;
-  justify-content:space-around;
-  background-color: rgb(0, 0, 0);
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.445);
   color: #ffff;
   z-index: 1;
 }
-.element-search{
+/* Item de filtragem */
+.element-search {
   position: absolute;
   top: 4rem;
   right: 3rem;
   outline: none;
-  height: 2rem ;
-  transform: translate3d(100rem,0,0);
+  height: 2rem;
+  transform: translate3d(100rem, 0, 0);
   width: 15rem;
-  transition: all .4s;
+  transition: all 0.4s;
   opacity: 0;
 }
-.element-search::placeholder{
+/* Colocando placeholder no elemento de pesquisa */
+.element-search::placeholder {
   color: #000;
 }
-.element-search.display{
+/* Colocando animação para aparecer item */
+.element-search.display {
   opacity: 1;
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
 }
 /*ITENS CARRINHO*/
-.itens-car{
+.itens-car {
   height: 90vh;
   overflow-y: auto;
   width: 90%;
@@ -105,22 +106,25 @@ body::-webkit-scrollbar-track{
   right: 0;
   opacity: 0;
   z-index: 1;
-  transition: all .4s;
-  transform: translate3d(80rem,0,0);
+  transition: all 0.4s;
+  transform: translate3d(80rem, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.qtd-car{
+/* Quantidade de itens carrinho */
+.qtd-car {
   color: #fff;
 }
-.itens-car.car-div{
-  transform: translate3d(0,0,0);
+/* animação para chamar o carrinho quando clicado */
+.itens-car.car-div {
+  transform: translate3d(0, 0, 0);
   opacity: 1;
 }
-.itens-car>.total{
+/* Valor total dos itens */
+.itens-car > .total {
   font-family: var(--fonte-title--);
-  font-size:20px;
+  font-size: 20px;
   position: absolute;
   top: 2rem;
   list-style: none;
@@ -129,43 +133,40 @@ body::-webkit-scrollbar-track{
   justify-content: center;
   text-align: center;
 }
-.itens-car::-webkit-scrollbar{
+/* Estilizando escollbar do carrinho */
+.itens-car::-webkit-scrollbar {
   width: 1rem;
 }
-.itens-car::-webkit-scrollbar-thumb{
+.itens-car::-webkit-scrollbar-thumb {
   background-color: rgb(86, 92, 104);
 }
-.itens-car::-webkit-scrollbar-track{
+.itens-car::-webkit-scrollbar-track {
   background-color: rgb(58, 79, 100);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
-.total>li{
+/* Estilizando cada elemento li dentro do carrinho */
+.total > li {
   position: relative;
   top: 3rem;
   background-color: rgb(58, 58, 75);
-  margin: .4rem;
+  margin: 0.4rem;
   padding: 1rem 2rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   border: solid 1px #fff;
 }
-.total{
+/* Valor total dos itens */
+.total {
   position: relative;
   width: 100%;
 }
-.carrinho-compras{
+/* Carrinho de comprar */
+.carrinho-compras {
   position: absolute;
   top: 1.2rem;
   width: 100%;
 }
-.remover{
-  border: none;
-  padding:.5rem .5rem ;
-  color: red;
-  border-radius: .3rem;
-  background-color:#000;
-  cursor: pointer;
-}
-.compra-total-card-wrapper{
+/* valor da compra - wrapper*/
+.compra-total-card-wrapper {
   position: absolute;
   top: 0;
   height: 3rem;
@@ -177,38 +178,44 @@ body::-webkit-scrollbar-track{
   font-family: var(--fonte-title--);
   font-size: 20px;
 }
-.total-preco{
+/* Valor da compra */
+.total-preco {
   margin: 1rem;
 }
-.finalizar-compra{
+/* Finalizar compra - wrapper */
+.finalizar-compra {
   position: absolute;
-  top: .4rem;
+  top: 0.4rem;
   right: 3rem;
 }
-.finalizar-compra>button{
+/* Botão de finalizar compra */
+.finalizar-compra > button {
   border: none;
-  padding: .2rem .2rem;
+  padding: 0.2rem 0.2rem;
   color: #fff;
   outline: none;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
   font-family: var(--fonte-subtitle--);
   background-color: rgba(81, 81, 151, 0.667);
   border-radius: 3px;
 }
-.finalizar-compra>button:hover{
+/* Animação de hover */
+.finalizar-compra > button:hover {
   transform: scale(1.1);
-  color:rgba(81, 81, 151, 0.667) ;
+  color: rgba(81, 81, 151, 0.667);
   background-color: #fff;
 }
-.img-logo{
+/* logo */
+.img-logo {
   cursor: pointer;
 }
 /*ITENS DO MENU FILHO*/
-.menu-bar{
+.menu-bar {
   display: none;
 }
-.itens-menu{
+/* Wrapper do itens de navegação interna */
+.itens-menu {
   width: 100%;
   height: 4rem;
   display: flex;
@@ -216,100 +223,104 @@ body::-webkit-scrollbar-track{
   align-items: center;
   justify-content: center;
 }
-/*ELEMENTOS A DO ITENS MENU*/
-.menu-speed>.links-menu>a{
+/*links de navegação interna*/
+.menu-speed > .links-menu > a {
   display: inline-block;
   text-align: center;
   font-size: 25px;
   margin: 2rem;
-  font-family:var(--fonte-title--);
+  font-family: var(--fonte-title--);
   color: #ffff;
-  text-transform:capitalize;
-  transition: all .4s;
+  text-transform: capitalize;
+  transition: all 0.4s;
   text-decoration: none;
 }
-.links-menu>a:hover{
+/* Colocando animação de hover nos links */
+.links-menu > a:hover {
   text-decoration: underline;
 }
 /*ICONES DOS ITENS MENU*/
-.menu-speed>.icones-car-busca>i{
+.menu-speed > .icones-car-busca > i {
   margin: 1rem;
   cursor: pointer;
   font-size: 20px;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-.fa-cart-plus{
+/* Carrinho de compra */
+.fa-cart-plus {
   cursor: pointer;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-
-.fa-cart-plus:hover{
+/* Coloando animação hover */
+.fa-cart-plus:hover {
   transform: scale(1.4);
 }
 
 /*LOGO PAGINA*/
-.itens-menu>img{
-  border-radius: .4rem;
+.itens-menu > img {
+  border-radius: 0.4rem;
   width: 50px;
   float: right;
 }
 /*ANIMAÇÃO NOS ELEMENTOS DO MENU*/
-.menu-speed>.links-menu>a:hover,
-.menu-speed>.icones-car-busca>i:hover{
+.menu-speed > .links-menu > a:hover,
+.menu-speed > .icones-car-busca > i:hover {
   transform: scale(1.4);
 }
 
-/* Container principal*/
-.container{
-  min-height:100vh;
-  width: 100%;
-}
 /*SESSAO HEADER*/
 
-.sessao-header{
+.sessao-header {
   position: relative;
   height: 40rem;
   width: 100%;
   background-color: #000;
   overflow: hidden;
 }
-.header-info{
+/* Descrição da sessão - wrapper */
+.header-info {
   height: 100%;
   width: 100%;
 }
-
-.header-info>img{
+/* Imagem de fundo do header */
+.header-info > img {
   animation: anima-img-header 10s infinite;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: .4 ;
+  opacity: 0.4;
 }
-@keyframes anima-img-header{
-  0%{
+/* Usando keyframes para animação */
+@keyframes anima-img-header {
+  0% {
     transform: scale(1.4);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
-.descri-header{
+
+/* Descrição do header */
+.descri-header {
   position: absolute;
   top: 15rem;
   left: 5rem;
 }
-.descri-header>h1{
+/* Estilizando titulo */
+.descri-header > h1 {
   color: #ffff;
   font-size: 30px;
   font-family: var(--fonte-subtitle--);
 }
-.descri-header>p{
+/* Estilizando paragrafo */
+.descri-header > p {
   font-size: 40px;
   font-family: var(--fonte-title--);
   color: #ffff;
-  margin: .4rem 0;
+  margin: 0.4rem 0;
 }
-.descri-header>a{
+/* Estilizando botão de navegação */
+.descri-header > a {
   display: block;
   font-size: 25px;
   font-family: var(--fonte-title--);
@@ -321,19 +332,18 @@ body::-webkit-scrollbar-track{
   text-decoration: none;
   border: solid 1px #fff;
   width: 30%;
-  padding:.4rem;
-  border-radius: .4rem;
-  transition: all .1s;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  transition: all 0.1s;
 }
-.descri-header>a:hover{
+/* Colocando animação de hover */
+.descri-header > a:hover {
   background-color: transparent;
   color: #fff;
-
 }
 
 /*SESSAO PRINCIPAL - SOBRE*/
-
-.sessao-principal{
+.sessao-principal {
   height: 40rem;
   width: 100%;
   background-color: rgb(31, 32, 39);
@@ -343,8 +353,8 @@ body::-webkit-scrollbar-track{
   align-items: center;
   overflow: hidden;
 }
-
-.card-wrapper-sobre{
+/* Card falando sobre sessão - wrapper */
+.card-wrapper-sobre {
   position: relative;
   width: 90%;
   height: 30rem;
@@ -353,172 +363,190 @@ body::-webkit-scrollbar-track{
   justify-content: space-around;
   align-items: center;
 }
-.card-wrapper-sobre>.img-card{
+/* Imagem principal  da sessão */
+.card-wrapper-sobre > .img-card {
   position: relative;
   height: 100%;
   object-fit: cover;
 }
-.card-wrapper-sobre>.img-card>img{
+/* Estilizando imagem */
+.card-wrapper-sobre > .img-card > img {
   height: 100%;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
-
-.card-wrapper-sobre>.descri-card-sobre>p{
+/* Paragrafo da sessão */
+.card-wrapper-sobre > .descri-card-sobre > p {
   margin: 30px;
   color: #fff;
   font-family: var(--fonte-subtitle--);
 }
-.descri-card-sobre>a{
+/* Link de navegação interna */
+.descri-card-sobre > a {
   display: block;
   width: 8rem;
   text-align: center;
   text-decoration: none;
-  font-family: var(--fonte-buttom--);
+  font-family: var(--fonte-subtitle--);
   color: #fff;
-  padding: .4rem .4rem;
-  border-radius: .4rem;
+  padding: 0.4rem 0.4rem;
+  border-radius: 0.2rem;
   margin: 30px;
-  background-color: rgb(84, 106, 181);
-  transition: all .4s;
+  background-color: rgb(52, 53, 62);
+  transition: all 0.4s ease-in-out;
 }
-.descri-card-sobre>a:hover{
-  transform:scale(1.2)
+
+/* Adicionando animação hover no botão */
+.descri-card-sobre > a:hover {
+  transform: scale(1.2);
 }
 /*SESSAO MENU*/
-.sessao-menu{
+.sessao-menu {
   height: 40rem;
   width: 100%;
   background-color: rgb(31, 32, 39);
   overflow: hidden;
 }
-
-.card-wrapper-gallery{
+/* Corpo dos cards */
+.card-wrapper-gallery {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
 }
-
-.card-wrapper-gallery>.card{
+/* Cards */
+.card-wrapper-gallery > .card {
   background-color: rgba(106, 97, 97, 0.227);
   width: 30%;
   height: 15rem;
   display: flex;
-  margin:.5rem;
+  margin: 0.5rem;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
-  border-radius: .4rem;
-  transition: all .5s ;
+  border-radius: 0.4rem;
+  transition: all 0.5s;
 }
-.card-wrapper-gallery>.card:hover{
+/* Animação de hover no card */
+.card-wrapper-gallery > .card:hover {
   border: solid 2px #fff;
 }
-
-.card-wrapper-gallery>.card>h4{
+/* Estilizando titulo do card */
+.card-wrapper-gallery > .card > h4 {
   font-family: var(--fonte-title--);
   font-size: 30px;
 }
-.card-wrapper-gallery>.card>p{
+/* Estilizando paragrafo do card */
+.card-wrapper-gallery > .card > p {
   font-family: var(--fonte-subtitle--);
 }
-.card-wrapper-gallery>.card>button{
+/* Botão de adicionar ao carrinho */
+.card-wrapper-gallery > .card > button {
   border: none;
   background-color: rgb(34, 36, 44);
   width: 50%;
-  padding: .4rem .4rem;
+  padding: 0.4rem 0.4rem;
   cursor: pointer;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   color: #fff;
   font-family: var(--fonte-subtitle--);
   font-size: 15px;
   margin: 10px;
-  transition:all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.card-wrapper-gallery>.card>button:hover{
-  background-color:rgb(97, 97, 97);
+/* Colocando animação de hover no botão de adicionar */
+.card-wrapper-gallery > .card > button:hover {
+  background-color: rgb(97, 97, 97);
 }
 
 /*SESSAO LOCALIZACAO*/
-
-.sessao-contato{
+.sessao-contato {
   height: 40rem;
   width: 100%;
-  background-color: rgb(31, 32,39);
+  background-color: rgb(31, 32, 39);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-iframe{
-  border-radius: .4rem;
-  transition: all .4s;
+/* Mapa */
+iframe {
+  border-radius: 0.4rem;
+  transition: all 0.4s;
   width: 100%;
 }
-.mapa-local-contato{
+/* Card de contato */
+.mapa-local-contato {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.formulario-contato{
+/* Formulario de contato */
+.formulario-contato {
   position: relative;
   width: 100%;
   height: 100%;
   background-color: rgb(38, 38, 38);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-.img-logo-site{
+/* Logo do site */
+.img-logo-site {
   position: absolute;
   top: 1rem;
 }
-
-.info-form{
+/* Informações - Form */
+.info-form {
   position: absolute;
   top: 5rem;
   width: 60%;
-  padding: .4rem .4rem;
+  padding: 0.4rem 0.4rem;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.info-form>input{
+/* Inputs do form */
+.info-form > input {
   color: #fff;
   font-family: var(--fonte-title--);
   border: none;
-  padding: .4rem .4rem;
+  padding: 0.4rem 0.4rem;
   font-size: 20px;
-  margin: .5rem;
+  margin: 0.5rem;
   outline: none;
   background: transparent;
   border-bottom: dashed rgb(255, 255, 255);
 }
-::placeholder{
+
+/* Placeholder dos inputs */
+::placeholder {
   color: #fff;
   font-family: var(--fonte-title--);
   font-size: 20px;
 }
-.info-form>input[type="submit"]{
+
+/* Pegando botão com type de submite */
+.info-form > input[type="submit"] {
   color: #fff;
   border: none;
   cursor: pointer;
   background-color: rgb(52, 110, 135);
-  border-radius: .2rem;
-  padding: .5rem .5rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.5rem;
 }
-.info-form>.name-login-options{
+/* Estilizando outras opções de contato do form */
+.info-form > .name-login-options {
   color: #fff;
   margin: 1rem;
   font-family: var(--fonte-subtitle--);
 }
+/* Estilizando outros tipos de login */
 .name-login-options::after,
-.name-login-options::before{
+.name-login-options::before {
   content: "";
   width: 1rem;
   align-items: center;
@@ -527,14 +555,15 @@ iframe{
   display: inline-block;
   background-color: #fff;
 }
-
-.contato-redes{
+/* Contato por outra redes */
+.contato-redes {
   justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.contato-redes>.facebook-login>button{
+/* Estilizando botão do facebook */
+.contato-redes > .facebook-login > button {
   display: flex;
   border: none;
   cursor: pointer;
@@ -542,40 +571,43 @@ iframe{
   color: #fff;
   width: 10rem;
   text-shadow: 1px 1px 1px #000;
-  border-radius:.4rem ;
+  border-radius: 0.4rem;
   font-family: var(--fonte-buttom--);
-  padding: .7rem .4rem;
-  transition: all .4s;
+  padding: 0.7rem 0.4rem;
+  transition: all 0.4s;
 }
-.facebook-login>button>i{
+/* Estilizando icone do facebook */
+.facebook-login > button > i {
   margin: 0 5px;
   font-size: 20px;
 }
-
-.contato-redes>.google-login>button{
+/* Estilizando button do google */
+.contato-redes > .google-login > button {
   display: flex;
   margin: 10px;
   border: none;
   cursor: pointer;
   width: 10rem;
   font-family: var(--fonte-buttom--);
-  border-radius:.4rem ;
-  padding: .6rem .4rem;
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.4rem;
   text-shadow: 1px 1px 1px #000;
   background-color: burlywood;
   color: #fff;
-  transition: all .4s;
+  transition: all 0.4s;
 }
-.google-login>button:hover,
-.facebook-login>button:hover{
-  transform:scale(1.1);
+/* Adicionando animação de hover nos botões de redes */
+.google-login > button:hover,
+.facebook-login > button:hover {
+  transform: scale(1.1);
 }
-.google-login>button>i{
+/* Estilizando icone do google */
+.google-login > button > i {
   margin: 0 5px;
   font-size: 15px;
 }
-
-.esqueci-senha{
+/* Esqueci minha senha -  nome */
+.esqueci-senha {
   background: transparent;
   border: none;
   color: #fff;
@@ -583,11 +615,12 @@ iframe{
   font-size: 15px;
   cursor: pointer;
 }
-.esqueci-senha:hover{
+/* Adicionando animação de hover */
+.esqueci-senha:hover {
   text-decoration: underline;
 }
 /*FOOTER PAGE*/
-.rodape-site{
+.rodape-site {
   width: 100%;
   height: 15rem;
   overflow: hidden;
@@ -602,93 +635,94 @@ iframe{
   font-family: var(--fonte-title--);
   font-size: 20px;
 }
-.redes-footer>a{
+/* Links de redes footer */
+.redes-footer > a {
   cursor: pointer;
-  margin: 1rem ;
+  margin: 1rem;
   text-decoration: none;
-  color: #fff
-  ;
+  color: #fff;
 }
-
-.btn_voltar_port{
+/* Botão para voltar para o port */
+.btn_voltar_port {
   display: block;
   border: none;
   background-color: rgb(37, 39, 53);
-  width: 6rem ;
+  width: 6rem;
   text-align: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: .4rem .4rem;
-  border-radius: .4rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 0.4rem 0.4rem;
+  border-radius: 0.4rem;
   color: #fff;
-  transition: all .4s;
+  transition: all 0.4s;
   margin: 1rem 0;
   text-decoration: none;
 }
-.btn_voltar_port:hover{
+/* Adicionando animação de hover no botão voltar */
+.btn_voltar_port:hover {
   transform: scale(1.1);
 }
 
-
-@media(max-width:1109px){
-  .card-wrapper-sobre{
+/* Responsividade */
+@media (max-width: 1109px) {
+  .card-wrapper-sobre {
     flex-direction: column;
     text-align: center;
   }
-  .descri-card-sobre{
+  .descri-card-sobre {
     font-size: 15px;
     text-align: center;
-    display: flex;  
+    display: flex;
     align-items: center;
     flex-direction: column;
   }
 }
-@media(max-width:979px){
-  .sessao-menu{
-    height:40rem;
-  }   
+@media (max-width: 979px) {
+  .sessao-menu {
+    height: 40rem;
+  }
 }
-@media(max-width:898px){
-  .sessao-contato{
+@media (max-width: 898px) {
+  .sessao-contato {
     height: 60rem;
   }
-  iframe{
-    height:50%;
+  iframe {
+    height: 50%;
   }
-  .mapa-local-contato{
+  .mapa-local-contato {
     flex-direction: column;
   }
-  .formulario-contato{
+  .formulario-contato {
     height: 40rem;
-    }
-    
+  }
 }
 
-@media(max-width:819px){
- .sessao-menu{
-   height: 107rem;
- }
- .sessao-menu>.card-wrapper-gallery>.card{
-   width: 60%;
- }
+@media (max-width: 819px) {
+  .sessao-menu {
+    height: 107rem;
+  }
+  .sessao-menu > .card-wrapper-gallery > .card {
+    width: 60%;
+  }
 }
 
-@media(max-width:778px){
-  .links-menu{
+@media (max-width: 778px) {
+  .links-menu {
     display: none;
   }
-  
-  #icone-cart{
+
+  #icone-cart {
     display: block;
     cursor: pointer;
   }
-  .icones-car-busca{
+  .icones-car-busca {
     display: none;
   }
-  .menu-speed{
+  .menu-speed {
     display: flex;
     justify-content: space-around;
   }
-  .menu-bar{
+  .menu-bar {
     display: block;
     width: 2.4rem;
     height: 1rem;
@@ -698,13 +732,13 @@ iframe{
     right: 0;
   }
 
-  .menu-bar>.lines{
+  .menu-bar > .lines {
     width: 2rem;
-    margin:3px;
-    height: .1rem;
+    margin: 3px;
+    height: 0.1rem;
     background-color: #fff;
   }
-  .links-menu.menu-animation{
+  .links-menu.menu-animation {
     display: flex;
     flex-direction: column;
     background-color: #000;
@@ -715,43 +749,43 @@ iframe{
   }
 }
 
-@media(max-width:723px){
-  .header-info>.descri-header>h1,.descri-header>p{
+@media (max-width: 723px) {
+  .header-info > .descri-header > h1,
+  .descri-header > p {
     font-size: 20px;
   }
-  .descri-header>a{
-    font-size:15px;
-    padding: .3rem .3rem;
+  .descri-header > a {
+    font-size: 15px;
+    padding: 0.3rem 0.3rem;
   }
-  .card-wrapper-gallery{
+  .card-wrapper-gallery {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-@media(max-width:532px){
-  .descri-header{
+@media (max-width: 532px) {
+  .descri-header {
+    left: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
   }
-  .card-wrapper-sobre>.img-card>img{
-    width:90%;
+  .card-wrapper-sobre > .img-card > img {
+    width: 90%;
   }
-  .card-wrapper-gallery>.card>.title-card,
-  .card-wrapper-gallery>.card>.value-element{
-    font-size:15px;
+  .card-wrapper-gallery > .card > .title-card,
+  .card-wrapper-gallery > .card > .value-element {
+    font-size: 15px;
   }
-  .card-wrapper-gallery>.card>button{
+  .card-wrapper-gallery > .card > button {
     width: 90%;
     font-size: 10px;
-    
   }
-  .finalizar-compra{
+  .finalizar-compra {
     left: 0;
     width: 10%;
   }
-  
 }
